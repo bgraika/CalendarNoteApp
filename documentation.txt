@@ -1,0 +1,11 @@
+Braedon Graika
+11346399
+MAD Final Project
+
+CaleNote: A calendar note app.
+
+My app has two main functions. Viewing a calendar and adding notes associated with each calendar day. In the calendar view you can view a list of cells that each represent a day of the month that you’re currently viewing and you can also switch between months. From the calendar view you can click on a cell and view the current text within in it at the bottom of the screen. Once a cell is clicked, you can either edit the notes within the cell by clicking the “edit note” button or you can edit the picture inside the calendar cell by clicking the “add cell picture” button.
+
+The note view of a cell allows adding text or you can also click the draw button. The draw button takes you to a new screen that allows drawing an image via touch. If the user saves this image then it will be placed within the notes where the user’s cursor was when they pressed draw. If the user clicks “save” within the note view then they will be transported back to the calendar view and the note they just made will be saved within the calendar cell they decided to add it to.
+
+Every note and cell picture created within my app will be saved inside core data and therefore can be accessed when the user reopens the app again. This means when the app starts up it will repopulate each calendar cell with the notes and cell pictures the user had previously created.

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9RH-a6-zmd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calendar-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MADCalendarNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Braedon's Calendar App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPa-bZ-ZLK">
+                                <rect key="frame" x="94" y="94" width="186" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWt-Ix-ckI">
+                                <rect key="frame" x="162" y="123" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAS-3U-K0S">
+                                <rect key="frame" x="279" y="135" width="80" height="30"/>
+                                <state key="normal" title="Next Month"/>
+                                <connections>
+                                    <action selector="nextMonthClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dUE-o9-lQe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUa-qI-clF">
+                                <rect key="frame" x="16" y="135" width="107" height="30"/>
+                                <state key="normal" title="Previous Month"/>
+                                <connections>
+                                    <action selector="lastMonthClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sgj-HW-a9d"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ot4-uH-ALV">
+                                <rect key="frame" x="16" y="202" width="343" height="341"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="UEz-Dm-XQ0">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="7DW-QT-D3b" customClass="CollectionViewCell" customModule="MADCalendarNoteApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-ym-Rq6">
+                                                    <rect key="frame" x="4" y="0.0" width="42" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wpc-7I-fVH">
+                                                    <rect key="frame" x="0.0" y="14" width="50" height="36"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="wpc-7I-fVH" firstAttribute="top" secondItem="Byo-ym-Rq6" secondAttribute="bottom" constant="0.5" id="23y-fK-zGg"/>
+                                            <constraint firstAttribute="bottom" secondItem="wpc-7I-fVH" secondAttribute="bottom" id="Ata-Cb-JFt"/>
+                                            <constraint firstItem="wpc-7I-fVH" firstAttribute="leading" secondItem="7DW-QT-D3b" secondAttribute="leading" id="G5J-LR-kLg"/>
+                                            <constraint firstAttribute="trailing" secondItem="Byo-ym-Rq6" secondAttribute="trailing" constant="4" id="Gsg-OP-Alv"/>
+                                            <constraint firstItem="Byo-ym-Rq6" firstAttribute="top" secondItem="7DW-QT-D3b" secondAttribute="top" id="Rq1-T7-j8v"/>
+                                            <constraint firstAttribute="trailing" secondItem="wpc-7I-fVH" secondAttribute="trailing" id="XEU-Vl-eFa"/>
+                                            <constraint firstItem="Byo-ym-Rq6" firstAttribute="leading" secondItem="7DW-QT-D3b" secondAttribute="leading" constant="4" id="d3K-fx-a2e"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="wpc-7I-fVH" id="lgW-dS-2AB"/>
+                                            <outlet property="myLabel" destination="Byo-ym-Rq6" id="Q9A-Yb-PcP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="S0a-Z4-lOm"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zEo-0A-eU2"/>
+                                </connections>
+                            </collectionView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="29W-PR-11s">
+                                <rect key="frame" x="16" y="580" width="343" height="79"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBs-WA-BT7">
+                                <rect key="frame" x="287" y="542" width="64" height="30"/>
+                                <state key="normal" title="Edit Note"/>
+                                <connections>
+                                    <action selector="editNoteClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cap-Ac-fK3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ8-zA-0Vy">
+                                <rect key="frame" x="16" y="542" width="110" height="30"/>
+                                <state key="normal" title="Add Cell Picture"/>
+                                <connections>
+                                    <action selector="addCellPictureClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ki6-YF-6Mc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="29W-PR-11s" secondAttribute="bottom" constant="8" id="5cl-tv-L9X"/>
+                            <constraint firstItem="CWt-Ix-ckI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ArR-5z-jxt"/>
+                            <constraint firstItem="gAS-3U-K0S" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GI1-Q4-9rJ"/>
+                            <constraint firstItem="29W-PR-11s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HiO-jc-AdN"/>
+                            <constraint firstItem="CWt-Ix-ckI" firstAttribute="top" secondItem="cPa-bZ-ZLK" secondAttribute="bottom" constant="8" id="IMt-1t-Xna"/>
+                            <constraint firstItem="29W-PR-11s" firstAttribute="top" secondItem="Ot4-uH-ALV" secondAttribute="bottom" constant="37" id="M6o-Xn-Lly"/>
+                            <constraint firstItem="Ot4-uH-ALV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="108" id="SXa-u7-k8r"/>
+                            <constraint firstItem="29W-PR-11s" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="U2G-MO-FWZ"/>
+                            <constraint firstItem="eJ8-zA-0Vy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WPT-ah-14Q"/>
+                            <constraint firstItem="gAS-3U-K0S" firstAttribute="top" secondItem="CWt-Ix-ckI" secondAttribute="bottom" constant="-9" id="aKN-Ye-0TY"/>
+                            <constraint firstItem="29W-PR-11s" firstAttribute="top" secondItem="eJ8-zA-0Vy" secondAttribute="bottom" constant="8" id="aKu-Nm-NHG"/>
+                            <constraint firstItem="Ot4-uH-ALV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="buF-qs-pWa"/>
+                            <constraint firstItem="cPa-bZ-ZLK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eQK-Uk-yeb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ot4-uH-ALV" secondAttribute="bottom" constant="124" id="gBP-71-igL"/>
+                            <constraint firstItem="Ot4-uH-ALV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="i14-lK-knk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XBs-WA-BT7" secondAttribute="trailing" constant="8" id="ikF-Wp-8MR"/>
+                            <constraint firstItem="GUa-qI-clF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="o0O-Pb-zVm"/>
+                            <constraint firstItem="GUa-qI-clF" firstAttribute="top" secondItem="CWt-Ix-ckI" secondAttribute="bottom" constant="-9" id="pU0-wX-coO"/>
+                            <constraint firstItem="29W-PR-11s" firstAttribute="top" secondItem="XBs-WA-BT7" secondAttribute="bottom" constant="8" id="vxX-4M-psY"/>
+                            <constraint firstItem="cPa-bZ-ZLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zNO-4X-CQ2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calendar" prompt="CaleNote" id="li0-27-bK3"/>
+                    <connections>
+                        <outlet property="calendarCollection" destination="Ot4-uH-ALV" id="HWr-CR-2ti"/>
+                        <outlet property="currentCellTextView" destination="29W-PR-11s" id="CnA-I4-ZQ6"/>
+                        <outlet property="monthLabel" destination="CWt-Ix-ckI" id="Xro-KI-dmA"/>
+                        <segue destination="dmw-tD-loR" kind="show" identifier="editNotesSegue" id="TP7-t7-Si7"/>
+                        <segue destination="o0U-eG-pvT" kind="show" identifier="drawImageSegue" id="mVW-0F-Sog"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986.39999999999998" y="53.523238380809602"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="7BA-KL-vUc">
+            <objects>
+                <viewController id="dmw-tD-loR" customClass="NoteViewController" customModule="MADCalendarNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zcq-lD-21H"/>
+                        <viewControllerLayoutGuide type="bottom" id="KDN-hy-nfK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eW0-a1-0nM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFu-Qn-cXI">
+                                <rect key="frame" x="169" y="121" width="36" height="30"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="sketchClick:" destination="dmw-tD-loR" eventType="touchUpInside" id="Uk3-Un-hTs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OFu-Qn-cXI" firstAttribute="centerX" secondItem="eW0-a1-0nM" secondAttribute="centerX" id="Dbj-gt-LbU"/>
+                            <constraint firstItem="OFu-Qn-cXI" firstAttribute="top" secondItem="Zcq-lD-21H" secondAttribute="bottom" constant="27" id="xQz-k6-6OS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notes" prompt="CaleNote" id="3y0-d1-h2e">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pcu-Oa-Saj">
+                            <connections>
+                                <action selector="cancelAction:" destination="dmw-tD-loR" id="Mcr-9o-gJ3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="mIU-4S-mbp">
+                            <connections>
+                                <action selector="doneAction:" destination="dmw-tD-loR" id="1Gl-1b-Gzi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="drawButton" destination="OFu-Qn-cXI" id="jY8-db-4r3"/>
+                        <segue destination="ZKS-iP-fEQ" kind="unwind" identifier="unwindFromEditNotes" unwindAction="unwindFromEditNotesWithSender:" id="liy-Oh-8Cp"/>
+                        <segue destination="o0U-eG-pvT" kind="show" identifier="drawViewSegue" id="2D9-Jk-0oq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7T-8s-2M9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZKS-iP-fEQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="54"/>
+        </scene>
+        <!--Draw-->
+        <scene sceneID="hl0-CL-mnV">
+            <objects>
+                <viewController id="o0U-eG-pvT" customClass="drawViewController" customModule="MADCalendarNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9aa-MC-ilr"/>
+                        <viewControllerLayoutGuide type="bottom" id="AmV-CQ-9NA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C3S-pp-Csh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h5d-Cm-ocK">
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h5d-Cm-ocK" firstAttribute="top" secondItem="9aa-MC-ilr" secondAttribute="bottom" id="0c6-0w-fml"/>
+                            <constraint firstItem="h5d-Cm-ocK" firstAttribute="leading" secondItem="C3S-pp-Csh" secondAttribute="leading" id="bmA-9c-ogC"/>
+                            <constraint firstItem="AmV-CQ-9NA" firstAttribute="top" secondItem="h5d-Cm-ocK" secondAttribute="bottom" id="fsK-Hd-AFg"/>
+                            <constraint firstAttribute="trailing" secondItem="h5d-Cm-ocK" secondAttribute="trailing" id="lv7-Qs-7SI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Draw" prompt="CaleNote" id="Q1O-gn-WK4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="htc-fV-REd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sDl-NS-Xro">
+                            <connections>
+                                <action selector="saveClick:" destination="o0U-eG-pvT" id="evZ-Dv-KY9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="drawImageView" destination="h5d-Cm-ocK" id="mCX-zL-O0Y"/>
+                        <segue destination="yk1-x0-C8x" kind="unwind" identifier="unwindFromDrawView" unwindAction="unwindFromDrawViewWithSender:" id="mHQ-zg-dQo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MdO-bU-CoG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yk1-x0-C8x" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="815"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gOC-gc-LTE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9RH-a6-zmd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L6D-ea-BHz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Gg-R5-g5V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Mt-Yx-VJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.200000000000003" y="53.523238380809602"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mVW-0F-Sog"/>
+    </inferredMetricsTieBreakers>
+</document>
